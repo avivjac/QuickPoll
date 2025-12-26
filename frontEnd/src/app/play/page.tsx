@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useGameStore } from '@/store/useGameStore';
 import QuestionView from '@/components/questionsView';
-import ResultsView from '@/components/resultsView';
+import { ResultsView } from '@/components/ResultsView';
 import { apiGet, apiPost } from '@/lib/api';
 
 export default function PlayPage() {
@@ -57,7 +57,7 @@ export default function PlayPage() {
 
       {results && (
         <>
-          <ResultsView question={currentQuestion} results={results} />
+          <ResultsView stats={results} />
           <button
             onClick={loadNextQuestion}
             className="mt-4 px-6 py-2 rounded-full border text-lg"

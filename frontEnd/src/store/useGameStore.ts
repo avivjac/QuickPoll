@@ -1,14 +1,13 @@
-// store/useGameStore.ts
 import { create } from 'zustand';
-import type { Question, ResultSlice } from '../lib/types';
+import type { Question, Stat } from '../lib/types';
 
 type GameState = {
   currentQuestion: Question | null;
-  results: ResultSlice[] | null;
+  results: Stat[] | null;
   loading: boolean;
 
   setQuestion: (q: Question | null) => void;
-  setResults: (r: ResultSlice[] | null) => void;
+  setResults: (r: Stat[] | null) => void;
   setLoading: (v: boolean) => void;
 };
 
